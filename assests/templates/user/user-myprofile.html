@@ -1,0 +1,222 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="{% static 'main/favicon.ico' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/owl.theme.default.min.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    
+
+    <title>Malicious URL</title>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+      <div class="container">
+          <a class="navbar-brand" href="#">Malicious URL Scanner<span class="dot">.</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'user_index' %}">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'user_myprofile' %}">MyProfile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'user_url' %}">URL</a>
+                </li>
+            </ul>
+              <a href="{% url 'main_index' %}" 
+              class="btn btn-brand ms-lg-3">Logout</a>
+          </div>
+      </div>
+  </nav>
+  <div class="container mt-5">
+
+    <form class="contact-form mt-5" method="post" enctype="multipart/form-data" onsubmit='return loginvalidation();' name='myform'>
+      {% csrf_token %}
+        <div class="row">
+          <div class="col-md-4 border-right">
+              <div class="d-flex flex-column align-items-center text-center p-3 ">
+                  <img class="  mt-5" style="border-radius: 525px; height:300px ; width:200px;" src="/media/{{user.user_image}}"><span
+                      class="font-weight-bold"></span><span class="text-black-50"></span><span>
+                  </span></div>
+          </div>
+          <div class="col-md-7 border-right">
+              <div class="p-3 py-5">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                      <h4 class="text-right">User Profile</h4>
+                  </div>
+                  <div class="row mt-2">
+                  
+  
+                      <div class="col-md-6 mb-2"><label class="labels">User Name</label><input  type="text" class="form-control"
+                              placeholder="first name" value="{{user.user_name}}"  name="name"></div>
+  
+                      <div class="col-md-6 mb-2"><label  class="labels" >Age</label><input  type="text"
+                          name="age"     class="form-control" value="{{user.user_age}}"  ></div> 
+  
+                      <div class="col-md-6 mb-2"><label  class="labels">User Email</label><input  type="text"
+                              class="form-control" name="email"  value="{{user.user_email}}" placeholder="Child Class"></div>
+                     
+                      <div class="col-md-6 mb-2"><label class="labels">User Password</label><input  type="text"
+                              class="form-control" name="password" value="{{user.user_password}}"     placeholder="Your password"></div>
+                              
+                     
+                      
+                      <div class="col-md-6 mb-2"><label class="labels" >Contact</label><input  type="text"
+                              class="form-control" name="contact" value="{{user.user_contact}}" placeholder="Your Phone"></div>
+                     
+                              <div class="col-md-6 mb-2"><label class="labels">Address</label><input  type="text"
+                              class="form-control" name="address" value="{{user.user_address}}"   placeholder="Your City" ></div>
+                              <div class="col-md-8 mb-2"><label class="labels">Upload Image</label><input  type="file"
+                                class="form-control" name="image" value="{{user.user_image}}"   placeholder="Your City" ></div>
+                      
+                      
+                  </div>
+                  <div class="pt-1 mt-5 mb-4">
+                    <button class="btn btn-dark " type="submit">Update Profile</button>
+                  </div>
+
+              
+                  </div>
+                 
+              </div>
+          </form>
+        </div>
+      </div>
+  <footer>
+    <div class="footer-top text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <h4 class="navbar-brand">Malicious URL Scanner<span class="dot">.</span></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom text-center">
+        <p class="mb-0">Copyright 2023. All rights Reserved</p>Designed & Develeped By <a
+            hrefs="https://codebook.in">Codebook</a>
+    </div>
+  </footer>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+              <div class="modal-body p-0">
+                  <div class="container-fluid">
+                      <div class="row gy-4">
+                          <div class="col-lg-4 col-sm-12 bg-cover"
+                              style="background-image: url(img/c2.jpg); min-height:300px;">
+                              <div>
+
+                              </div>
+                          </div>
+                          <div class="col-lg-8">
+                              <form class="p-lg-5 col-12 row g-3">
+                                  <div>
+                                      <h1>Get in touch</h1>
+                                      <p>Fell free to contact us and we will get back to you as soon as possible</p>
+                                  </div>
+                                  <div class="col-lg-6">
+                                      <label for="userName" class="form-label">First name</label>
+                                      <input type="text" class="form-control" placeholder="Jon" id="userName"
+                                          aria-describedby="emailHelp">
+                                  </div>
+                                  <div class="col-lg-6">
+                                      <label for="userName" class="form-label">Last name</label>
+                                      <input type="text" class="form-control" placeholder="Doe" id="userName"
+                                          aria-describedby="emailHelp">
+                                  </div>
+                                  <div class="col-12">
+                                      <label for="userName" class="form-label">Email address</label>
+                                      <input type="email" class="form-control" placeholder="Johndoe@example.com"
+                                          id="userName" aria-describedby="emailHelp">
+                                  </div>
+                                  <div class="col-12">
+                                      <label for="exampleInputEmail1" class="form-label">Enter Message</label>
+                                      <textarea name="" placeholder="This is looking great and nice."
+                                          class="form-control" id="" rows="4"></textarea>
+                                  </div>
+
+                                  <div class="col-12">
+                                      <button type="submit" class="btn btn-brand">Send Message</button>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </div>
+  {% if messages %}
+  {% for message in messages %}
+  {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+  <script>swal({
+          title: "Updated Successfully!",
+          text: "{{message}}",
+          icon: "success",
+          button: "OK",
+      });
+  </script>
+
+
+  {% elif message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+  <script>swal({
+          title: "Warning :)",
+          text: "{{message}}",
+          icon: "warning",
+          button: "OK",
+      });
+  </script>
+  {% elif message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+  <script>swal({
+          title: "error :)",
+          text: "{{message}}",
+          icon: "error",
+          button: "OK",
+      });
+  </script>
+  {% elif message.level == DEFAULT_MESSAGE_LEVELS.DANGER %}
+  <script>swal({
+          title: "error :)",
+          text: "{{message}}",
+          icon: "error",
+          button: "OK",
+      });
+  </script>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+  <script src="{% static 'main/js/jquery.min.js' %}"></script>
+  <script src="{% static 'main/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'main/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'main/js/app.js' %}"></script>
+</body>
+</html>
+
+   
+
+
+   
+
+    
+    
+ 

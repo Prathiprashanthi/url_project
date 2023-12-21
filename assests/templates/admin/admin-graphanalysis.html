@@ -1,0 +1,391 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Malicious URL </title>
+    <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!-- Meta -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="description" content="CodedThemes">
+      <meta name="keywords" content=" Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+      <meta name="author" content="CodedThemes">
+      <!-- Favicon icon -->
+      <link rel="icon" href="{% static 'admin/assets/images/favicon.ico' %}" type="image/x-icon">
+      <!-- Google font-->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+      <!-- Required Fremwork -->
+      <link rel="stylesheet" type="text/css" href="{% static 'admin/assets/css/bootstrap/css/bootstrap.min.css' %}">
+      <!-- themify-icons line icon -->
+      <link rel="stylesheet" type="text/css" href="{% static 'admin/assets/icon/themify-icons/themify-icons.css' %}">
+      <!-- ico font -->
+      <link rel="stylesheet" type="text/css" href="{% static 'admin/assets/icon/icofont/css/icofont.css' %}">
+      <!-- Style.css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'admin/assets/css/style.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'admin/assets/css/jquery.mCustomScrollbar.css' %}">
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></script>
+
+      <style>
+        body {
+          background-color: #f9f9fa
+      }
+     
+      .flex {
+          -webkit-box-flex: 1;
+          -ms-flex: 1 1 auto;
+          flex: 1 1 auto
+      }
+     
+      @media (max-width:991.98px) {
+          .padding {
+              padding: 1.5rem
+          }
+      }
+     
+      @media (max-width:767.98px) {
+          .padding {
+              padding: 1rem
+          }
+      }
+     
+      .padding {
+          padding: 5rem
+      }
+     
+      .card {
+          background: #fff;
+          border-width: 0;
+          border-radius: .25rem;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+          margin-bottom: 1.5rem
+      }
+     
+      .card {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          min-width: 0;
+          word-wrap: break-word;
+          background-color: #fff;
+          background-clip: border-box;
+          border: 1px solid rgba(19, 24, 44, .125);
+          border-radius: .25rem
+      }
+     
+      .card-header {
+          padding: .75rem 1.25rem;
+          margin-bottom: 0;
+          background-color: rgba(19, 24, 44, .03);
+          border-bottom: 1px solid rgba(19, 24, 44, .125)
+      }
+     
+      .card-header:first-child {
+          border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+      }
+     
+      card-footer,
+      .card-header {
+          background-color: transparent;
+          border-color: rgba(160, 175, 185, .15);
+          background-clip: padding-box
+      }
+      </style>
+  </head>
+  <body style="overflow-x: scroll; overflow-y: scroll;">
+    <!-- Pre-loader start -->
+    <div class="theme-loader">
+        <div class="ball-scale">
+            <div class='contain'>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pre-loader end -->
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+
+            <nav class="navbar header-navbar pcoded-header">
+                <div class="navbar-wrapper">
+
+                    <div class="navbar-logo">
+                        <a class="mobile-menu" id="mobile-collapse" href="#!">
+                            <i class="ti-menu"></i>
+                        </a>
+                        <a class="mobile-search morphsearch-search" href="#">
+                            <i class="ti-search"></i>
+                        </a>
+                        <a href="{% url 'admin_index' %}">
+                            
+                        </a>
+                        <a class="mobile-options">
+                            <i class="ti-more"></i>
+                        </a>
+                    </div>
+
+                    <div class="navbar-container container-fluid">
+                        <ul class="nav-left">
+                            <li>
+                                <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a></div>
+                            </li>
+
+                            <li>
+                                <a href="#!" onclick="javascript:toggleFullScreen()">
+                                    <i class="ti-fullscreen"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav-right">
+                          
+                            <li class="user-profile header-notification">
+                                <a href="#!">
+                                    <img src="{% static 'admin/assets/images/avatar-4.jpg' %}" class="img-radius" alt="User-Profile-Image">
+                                    <span>Admin</span>
+                                    <i class="ti-angle-down"></i>
+                                </a>
+                                <ul class="show-notification profile-notification">
+                                   
+                                    <li>
+                                        <a href="{% url 'main_index' %}">
+                                            <i class="ti-layout-sidebar-left"></i> Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    <nav class="pcoded-navbar">
+                        <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                        <div class="pcoded-inner-navbar main-menu">
+
+                            <div class="pcoded-search">
+                                <span class="searchbar-toggle"> </span>
+
+                            </div>
+                            <!-- <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Layout</div> -->
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="active">
+                                    <a href="{% url 'admin_index' %}">
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.basic-components.main">User
+                                            Management</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="{% url 'pending_users' %}">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Pending users</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="{% url 'all_users' %}">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">All users</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.basic-components.main">Data
+                                            Management</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="{% url 'admin_add_data' %}">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Add
+                                                    DataFile</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.basic-components.main">Graph
+                                            Analysis</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="{% url 'admin_graph_analysis' %}">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Algo
+                                                    Comparison Graph</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+
+
+                                    </ul>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </nav>
+                </div>
+                
+                <div class="container" style="height:1000px;">
+               
+                <script>
+                    $(document).ready(function() {
+                        var ctx = $("#chart-line");
+                        var myLineChart = new Chart(ctx, {
+                            type: 'doughnut',
+                            data: {
+                                labels: ["Random Forest", "KNeighborsClassifier", "Logistic Regression","SVM"],
+                                datasets: [{
+                                    data: [{{rf_ac}}, {{nb_ac}},{{lr_ac}}, {{sv_ac}}],
+                                    backgroundColor: ["rgba(255, 0, 0, 0.5)", "rgba(100, 255, 0, 0.5)", "rgba(200, 50, 255, 0.5)", "rgba(0, 100, 255, 0.5)"]
+                                }]
+                            },
+                            options: {
+                                title: {
+                                    display: true,
+                                    text: 'Algoritham comparison chart'
+                                }
+                            }
+                        });
+                    });
+                </script>
+                <div class="container-fluid">
+                <div class="page-content page-container" id="page-content">
+                    <div class="padding">
+                        <div class="row">
+                            <div class="container-fluid d-flex justify-content-center">
+                                <!-- <div class="col-sm-8 col-md-6"> -->
+                                    <!-- <div class="card"> -->
+                                        <!-- <div class="card-header">Comparison Doughnut chart</div> -->
+                                        <!-- <h3>Comparison Doughnut chart</h3> -->
+                                        <div class="card-body" style="height: 420px">
+                                            <div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                                <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                                    <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
+                                                </div>
+                                                <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                                    <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+                                                </div>
+                                            </div> <canvas id="chart-line" width="299" height="200" class="chartjs-render-monitor" style="display: block; width: 299px; height: 200px;"></canvas>
+                                        </div>
+                                    <!-- </div> -->
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+                  
+                 
+                   
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+       
+
+ 
+<!-- Warning Section Ends -->
+<!-- Required Jquery -->
+<script type="text/javascript" src="{% static 'admin/assets/js/jquery/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'admin/assets/js/jquery-ui/jquery-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'admin/assets/js/popper.js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'admin/assets/js/bootstrap/js/bootstrap.min.js' %}"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="{% static 'admin/assets/js/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
+<!-- modernizr js -->
+<script type="text/javascript" src="{% static 'admin/assets/js/modernizr/modernizr.js' %}"></script>
+<!-- am chart -->
+<script src="{% static 'admin/assets/pages/widget/amchart/amcharts.min.js' %}"></script>
+<script src="{% static 'admin/assets/pages/widget/amchart/serial.min.js' %}"></script>
+<!-- Todo js -->
+<script type="text/javascript " src="{% static 'admin/assets/pages/todo/todo.js' %} "></script>
+<!-- Custom js -->
+<script type="text/javascript" src="{% static 'admin/assets/pages/dashboard/custom-dashboard.js' %}"></script>
+<script type="text/javascript" src="{% static 'admin/assets/js/script.js' %}"></script>
+<script type="text/javascript " src="{% static 'admin/assets/js/SmoothScroll.js' %}"></script>
+<script src="{% static 'admin/assets/js/pcoded.min.js' %}"></script>
+<script src="{% static 'admin/assets/js/demo-12.js' %}"></script>
+<script src="{% static 'admin/assets/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+<script>
+
+var $window = $(window);
+var nav = $('.fixed-button');
+    $window.scroll(function(){
+        if ($window.scrollTop() >= 200) {
+         nav.addClass('active');
+     }
+     else {
+         nav.removeClass('active');
+     }
+ });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,535 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Malicious URL </title>
+    <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="CodedThemes">
+    <meta name="keywords"
+        content=" Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="CodedThemes">
+    <!-- Favicon icon -->
+    <link rel="icon" href="{% static 'admin/assets/images/favicon.ico' %}" type="image/x-icon">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/assets/css/bootstrap/css/bootstrap.min.css' %}">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/assets/icon/themify-icons/themify-icons.css' %}">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/assets/icon/icofont/css/icofont.css' %}">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/assets/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/assets/css/jquery.mCustomScrollbar.css' %}">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Pre-loader start -->
+    <div class="theme-loader">
+        <div class="ball-scale">
+            <div class='contain'>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pre-loader end -->
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+
+            <nav class="navbar header-navbar pcoded-header">
+                <div class="navbar-wrapper">
+
+                    <div class="navbar-logo">
+                        <a class="mobile-menu" id="mobile-collapse" href="#!">
+                            <i class="ti-menu"></i>
+                        </a>
+                        <a class="mobile-search morphsearch-search" href="#">
+                            <i class="ti-search"></i>
+                        </a>
+                        <a href="{% url 'admin_index' %}">
+                            
+                        </a>
+                        <a class="mobile-options">
+                            <i class="ti-more"></i>
+                        </a>
+                    </div>
+
+                    <div class="navbar-container container-fluid">
+                        <ul class="nav-left">
+                            <li>
+                                <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a href="#!" onclick="javascript:toggleFullScreen()">
+                                    <i class="ti-fullscreen"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav-right">
+
+                            <li class="user-profile header-notification">
+                                <a href="#!">
+                                    <img src="{% static 'admin/assets/images/avatar-4.jpg' %}" class="img-radius"
+                                        alt="User-Profile-Image">
+                                    <span>Admin</span>
+                                    <i class="ti-angle-down"></i>
+                                </a>
+                                <ul class="show-notification profile-notification">
+
+                                    <li>
+                                        <a href="{% url 'main_index' %}">
+                                            <i class="ti-layout-sidebar-left"></i> Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    <nav class="pcoded-navbar">
+                        <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                        <div class="pcoded-inner-navbar main-menu">
+
+                            <div class="pcoded-search">
+                                <span class="searchbar-toggle"> </span>
+
+                            </div>
+                            <!-- <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Layout</div> -->
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="active">
+                                    <a href="{% url 'admin_index' %}">
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.basic-components.main">User
+                                            Management</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="{% url 'pending_users' %}">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Pending users</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="{% url 'all_users' %}">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">All users</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.basic-components.main">Data
+                                            Management</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="{% url 'admin_add_data' %}">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Add
+                                                    DataFile</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.basic-components.main">Graph
+                                            Analysis</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="{% url 'admin_graph_analysis' %}">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Algo
+                                                    Comparison Graph</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+
+
+                                    </ul>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </nav>
+                    <div class="pcoded-content">
+                        <div class="pcoded-inner-content">
+                            <div class="main-body">
+                                <div class="page-wrapper">
+
+                                    <div class="page-body">
+                                        <div class="row">
+                                            <!-- card1 start -->
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <i class="icofont icofont-pie-chart bg-c-blue card1-icon"></i>
+                                                        <span class="text-c-blue f-w-600">User</span>
+                                                        <h4>{{user}}</h4>
+                                                        <div>
+                                                            <span class="f-left m-t-10 text-muted">
+                                                                <!-- <i class="text-c-blue f-16 icofont icofont-warning m-r-10"></i>Get more space -->
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- card1 end -->
+                                            <!-- card1 start -->
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <i class="icofont icofont-ui-home bg-c-pink card1-icon"></i>
+                                                        <span class="text-c-pink f-w-600">Dataset</span>
+                                                        <h4>{{Dataset}}</h4>
+                                                        <div>
+                                                            <span class="f-left m-t-10 text-muted">
+                                                                <!-- <i class="text-c-pink f-16 icofont icofont-calendar m-r-10"></i>Last 24 hours -->
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- card1 end -->
+                                            <!-- card1 start -->
+                                            <!-- <div class="col-md-6 col-xl-3">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <i class="icofont icofont-warning-alt bg-c-green card1-icon"></i>
+                                                        <span class="text-c-green f-w-600">Fixed issue</span>
+                                                        <h4>45</h4>
+                                                        <div>
+                                                            <span class="f-left m-t-10 text-muted">
+                                                                <i class="text-c-green f-16 icofont icofont-tag m-r-10"></i>Tracked via microsoft
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                            <!-- card1 end -->
+                                            <!-- card1 start -->
+                                            <!-- <div class="col-md-6 col-xl-3">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <i class="icofont icofont-social-twitter bg-c-yellow card1-icon"></i>
+                                                        <span class="text-c-yellow f-w-600">Followers</span>
+                                                        <h4>+562</h4>
+                                                        <div>
+                                                            <span class="f-left m-t-10 text-muted">
+                                                                <i class="text-c-yellow f-16 icofont icofont-refresh m-r-10"></i>Just update
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                            <!-- card1 end -->
+                                            <!-- Statestics Start -->
+                                            <div class="col-md-12 col-xl-8">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>Statestics</h5>
+                                                        <div class="card-header-left ">
+                                                        </div>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="icofont icofont-simple-left "></i></li>
+                                                                <li><i class="icofont icofont-maximize full-card"></i>
+                                                                </li>
+                                                                <li><i class="icofont icofont-minus minimize-card"></i>
+                                                                </li>
+                                                                <li><i class="icofont icofont-refresh reload-card"></i>
+                                                                </li>
+                                                                <li><i class="icofont icofont-error close-card"></i>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div id="statestics-chart" style="height:517px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+                                            <!-- Email Sent End -->
+                                            <!-- Data widget start -->
+
+
+                                            <!-- Data widget End -->
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="styleSelector">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+    <script>swal({
+            title: "Admin Login Successfully!",
+            text: "{{message}}",
+            icon: "success",
+            button: "OK",
+        });
+    </script>
+
+
+    {% elif message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+    <script>swal({
+            title: "Warning :)",
+            text: "{{message}}",
+            icon: "warning",
+            button: "OK",
+        });
+    </script>
+    {% elif message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+    <script>swal({
+            title: "error :)",
+            text: "{{message}}",
+            icon: "error",
+            button: "OK",
+        });
+    </script>
+    {% elif message.level == DEFAULT_MESSAGE_LEVELS.DANGER %}
+    <script>swal({
+            title: "error :)",
+            text: "{{message}}",
+            icon: "error",
+            button: "OK",
+        });
+    </script>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+    <script type="text/javascript">
+        function loginvalidation() {
+            var Email = document.myform.email
+            var Passw = /^(?=.[0-9])(?=.[!@#$%^&])[a-zA-Z0-9!@#$%^&]{5,16}$/;
+            var mailformat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+            var Password = document.myform.password
+            var Name = document.myform.fullname
+            var Contact = document.myform.contact
+            var AadharPhoto = document.myform.aadharphoto
+            var GSTPhoto = document.myform.gstphoto
+            // var StudentID = document.myform.studentID
+            // var Branch = document.myform.branch
+            // var Year = document.myform.year
+            // var Mobilenumber = document.myform.user_mobile
+            // var Typeuser = document.myform.user_birth
+            var Photo = document.myform.photo
+
+
+
+            if (Name.value == "") {
+                alert("Please Enter Your Full Name:");
+                Name.focus();
+                return false;
+            }
+            if (Contact.value == "") {
+                alert("Please Enter Your Contact Number:");
+                Contact.focus();
+                return false;
+            }
+            // if (StudentID.value == "") {
+            // 	alert("Please Enter Your StudentID Number:");
+            // 	StudentID.focus();
+            // 	return false;
+            // }
+            // if (Branch.value == "") {
+            // 	alert("Please Enter Your Branch:");
+            // 	Branch.focus();
+            // 	return false;
+            // }
+            // if (Year.value == "") {
+            // 	alert("Please Choose your Year of Study:");
+            // 	Year.focus();
+            // 	return false;
+            // }
+            // if (Mobilenumber.value.length != 10) {
+
+            //     alert("please Enter valid mobile number");
+
+            //     return false;
+
+            // }
+
+            // if (Mobilenumber.value.length <= 0) {
+
+            //     alert("Please Enter Mobile Number");
+
+            //     return false;
+            // }
+
+            if (Email.value == "") {
+                alert("Please Enter Your Email Address");
+                Email.focus();
+                return false;
+            }
+
+            if (!Email.value.match(mailformat)) {
+                alert("Invalid Email format");
+                Email.focus();
+                return false;
+            }
+            // if (Typeuser.value == ""){
+
+            //     alert("Please Select DOB: ");
+            //     Typeuser.focus();
+
+            //     return false;
+            // }
+            if (Password.value.length <= 0) {
+                alert("Please Enter Your Password")
+                Password.focus();
+                return false;
+            }
+            // if (!Password.value.match(passw)) {
+            //     alert("password should must be special Characters and Numbers")
+            //     Password.focus();
+            //     return false;
+            // }
+            if (Password.value.length < 6) {
+                alert("password should not be less then six Characters")
+                Password.focus();
+                return false;
+            }
+
+            if (AadharPhoto.value == "") {
+                alert("Please Upload Aadhar Image:");
+                AadharPhoto.focus();
+                return false;
+            }
+            if (GSTPhoto.value == "") {
+                alert("Please Upload GST Invoice Bill Image:");
+                GSTPhoto.focus();
+                return false;
+            }
+            if (Photo.value == "") {
+                alert("Please Upload Profile Image:");
+                Photo.focus();
+                return false;
+            }
+        }
+
+    </script>
+
+
+    <!-- Warning Section Ends -->
+    <!-- Required Jquery -->
+    <script type="text/javascript" src="{% static 'admin/assets/js/jquery/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/assets/js/jquery-ui/jquery-ui.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/assets/js/popper.js/popper.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/assets/js/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="{% static 'admin/assets/js/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
+    <!-- modernizr js -->
+    <script type="text/javascript" src="{% static 'admin/assets/js/modernizr/modernizr.js' %}"></script>
+    <!-- am chart -->
+    <script src="{% static 'admin/assets/pages/widget/amchart/amcharts.min.js' %}"></script>
+    <script src="{% static 'admin/assets/pages/widget/amchart/serial.min.js' %}"></script>
+    <!-- Todo js -->
+    <script type="text/javascript " src="{% static 'admin/assets/pages/todo/todo.js' %} "></script>
+    <!-- Custom js -->
+    <script type="text/javascript" src="{% static 'admin/assets/pages/dashboard/custom-dashboard.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/assets/js/script.js' %}"></script>
+    <script type="text/javascript " src="{% static 'admin/assets/js/SmoothScroll.js' %}"></script>
+    <script src="{% static 'admin/assets/js/pcoded.min.js' %}"></script>
+    <script src="{% static 'admin/assets/js/demo-12.js' %}"></script>
+    <script src="{% static 'admin/assets/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+    <script>
+        var $window = $(window);
+        var nav = $('.fixed-button');
+        $window.scroll(function () {
+            if ($window.scrollTop() >= 200) {
+                nav.addClass('active');
+            }
+            else {
+                nav.removeClass('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
